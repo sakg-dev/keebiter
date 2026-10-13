@@ -146,6 +146,7 @@ Now power was done but many things were left like rgb data, gnd etc. I started r
 So now only GNDs were need to be connected but i found out, if we do GND fill, we don't need to manually connect all GNDS with each other. So after several(rlly) painful attempts(not recorded), i started by drawing a filled zone on both back and front copper layer, GND as net. I noticed several air pockets hence started adding vias there (in first did in b.cu then f.cu). also i noticed there were some ratsnest that were pointing to nowhere in top so added vias and did sm troubleshooting there too and ended up with 0 unrouted trace(actually idk why it was showing 1 but when ran drc, it was 0)
 
 While adding vias in f.cu for removing air pockets, i ran DRC checks to see issues and started resolving that but i wasn't able to resolve all as well as didn't remove all air pockets in f.cu as i closed laptop.
+![](./imgs/pcb_route_debug.png)
 
 **Total time spent: 1 hours 31 minutes**
 
