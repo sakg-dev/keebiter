@@ -1,22 +1,22 @@
 ------------
-INFO:
- - total logged hr: 52h 53m (named as my-keeb, keeb-2 and keep-2 in hackatime -- rest time are for writing journals )
+ - title: "SakG's First Mechanical Keeb"
+ - author: "Sak G"
+ - description: "A 60% Alice type tactile Keeb"
+ - created_at: "2026-08-12"
+ - total logged hr: 52h 53m (on hardware, rest time of hackatime is for writing lapse)
  - source: https://lapse.hackclub.com/user/@sakgdev14
- - tldr: me yapping while building keyboard
- - heading format: TITLE - START_DATE - START_TIME (took HRS MINS (#might be less than sum of lapse as i subtracted pauses i took#)) - [TIMELAPSE_VID1, TIMELAPSE_VID2....]
  - fun fact: it would be my very first mechanical keyboard and its self made UwU
 ------------
 
-## Deciding keyboard - Aug 12 - 17:48
-Alrit so i guess i wanna build an alice type 60% tactile keyboard. though i have never used bt ig i would go with it..
-
-## Planning and Layout of the keyboard - Aug 12 - 18:32 (took 2h 28m) - [[vid1](https://lapse.hackclub.com/timelapse/Xd68zajk7jc4)]
+# Aug 12: Planning and Layout of the keyboard - [[vid1](https://lapse.hackclub.com/timelapse/Xd68zajk7jc4)]
 It was ig ez and most creative part as i had to do the main thing: Sketching and making layout for the keyboard.
 
 At first i was skatching in krita and was googling abt abt custom alice keyboard and got this repo: https://github.com/floookay/adelheid, and soon realized we can generate layout, so i forked the layout of this repo and started making it my own. sm major changes i did was removing f1-f12 as a result changing position of many corresponding keys and after sm minor changes and wasting 2 hrs, and taking feedback from ppl and ai, i got this:
 ![my keeb layout](./imgs/keeb_layout.png)
 
-## Schematics designing - Aug 13 - 6:46 (took 3h 5m) - [[vid1](https://lapse.hackclub.com/timelapse/cqDWx0sxkFup)]
+**Total time spent: 2 hours 28 minutes**
+
+# Aug 13: Schematics designing - [[vid1](https://lapse.hackclub.com/timelapse/cqDWx0sxkFup)]
 Attempt 1: i knew nothing abt schematics so after reading the guide i began by installing the plugins in kicad then spent sm time struggling to create project and go to schematics tab. once it was done i began adding all components and joined diode and key switch then imported the keyboard layout as referance and duplicated the diode and switch. then as it was said i started connecting them with rows and colums wire and i was halfway but realized sm of the ends of the switch was too much close or nearly got connected to the column wire so i js deleted the project and started new.
 
 Attempt 2: So i saw other's schematics and found out that instead of keeping it in the alice shape, they did rectangular and then got to know its js to show connection regardless of position then after sm time i finished doing this(duplicating switch/diode) then as told in guide, i labeled rows and cols and attached it with pins and heres the img: 
@@ -26,14 +26,18 @@ After this i added 5 stabalizers: 2.25u for shift, shift r, enter, 2u for left s
 
 Though i wanted to add rgb lights, and other things but i was worried i might mess up hence decided to build a simple one first..
 
-## PCB Designing - Aug 13 - 18:36 (took 4h 20m) - [[vid1](https://lapse.hackclub.com/timelapse/YOkFsyImk0Pb), [vid2](https://lapse.hackclub.com/timelapse/Ex7zEscL5foG)]
+**Total time spent: 3 hours 5 minutes**
+
+# Aug 13: PCB Designing - [[vid1](https://lapse.hackclub.com/timelapse/YOkFsyImk0Pb), [vid2](https://lapse.hackclub.com/timelapse/Ex7zEscL5foG)]
 Ok this was so fun! So after building schematics, i had to build pcb, i started by looking at others as i had no idea abt it, then i realized here i have to place and design components as i want the keyboard irl. so thats, what i did, i started placing switches and diodes one by one and the hard part was rotating and placing it such that it doesn't conflict.. then i completed it in ~2 hrs, though i am not confirmed whether i did right or not as i jst placed them as i thought was right not with exact measurements. btw this is what i got:
 ![](./imgs/pcb_halfway.png)
 
  Alrit so i thought this was all for pcb but got to know now i would have to route traces.. i started by looking  at other's routed board and started mine, i tried routing one row but was confused as the traces were conflicting but soon realized how to do! at first i was trynna making it as clean as possble but at the end got to know that it must be as short as possible hence had to edit and make it short. I used F.Cu for rows and B.Cu for cols. Afterwards, i edited my avatar and used it as silkscreen in the pcb! But the problem was at last in the guide it was said to flood leftover copper traces with gnd but i didn't find gnd :( so i skipped this as DRC was success. heres the routed pcb:
 ![](./imgs/pcb_routed.png)
 
-## Restarting Schematics part 1 - Aug 15 - 00:14 (took 2h 45m) - [[vid1](https://lapse.hackclub.com/timelapse/MzG8KxQDhcaJ)]
+**Total time spent: 4 hours 20 minutes**
+
+# Aug 15: Restarting Schematics part 1 - [[vid1](https://lapse.hackclub.com/timelapse/MzG8KxQDhcaJ)]
 So i jst found out that i messed up in my pcb: using uneven space even smwhere the switch has less area than it needs, etc. as well as i wanted to add rgb backlight (which i wasn't adding as i thought it might be complex but.. worth trying)
 
 Hence i rm rf my project(schemetics was saved in github lel) and started from schematics again. at first i spent an hr revising foundation concepts of electronics and pcb. I named this project keeb-2 as i wanted it to differentiate from first one.
@@ -43,8 +47,10 @@ I used the original schematics of prev and started editing it. i looked into oth
 i moved keyboard matrix into new sheet but had no idea how to do input output of wires so spent few time to figure out but failed and jst dmd one person and left it. then did sm formatting inspired by others schematic.
 
 then i started researching abt rgbs and started implementing that, which took a little much time.. but now all the wires of different rows were conflicting so jst i shut down the laptop(didn't cmplt the rgb matrix)
+ 
+**Total time spent: 2 hours 45 minutes**
 
-## Schematics Part 2 - Aug 15 - 08:33 (took 2h 54m) - [[vid1](https://lapse.hackclub.com/timelapse/s9vvDBUa4eBe)]
+# Aug 15: Schematics Part 2 - [[vid1](https://lapse.hackclub.com/timelapse/s9vvDBUa4eBe)]
 i began the work i had left ystday: rgb matrix, after i did 2 rows. i asked my friend whether i was doing crrect or not and on the same time did sm more research to make sure i am doing correct. then i spent next 40 minutes making it for rest rows(4 more). then i spent sm time understanding how it was working and perfecting it.
 
 Till then my friend had told me how to take input/output in sheets, so jst started encapsulating keyboard matrix and light matrix and replacing text with input pins, tbh it was so satisfying..
@@ -57,7 +63,9 @@ btw heres the schematics:
 ![](./imgs/sch_half_done_2ii.png)
 ![](./imgs/sch_half_done_2iii.png)
 
-## Final Schematics - Aug 16 - 08:31 (took 55m) - [[vid1](https://lapse.hackclub.com/timelapse/G30fItRTDwur)]
+**Total time spent: 2 hours 54 minutes**
+
+# Aug 16: Final Schematics - [[vid1](https://lapse.hackclub.com/timelapse/G30fItRTDwur)]
 so most of my doubt were clear now hence i began doing last part of schematics.
 
 At first instead of providing a single 5v trace to all 61 rgbs, i did 6 seperate, then i added mounting holes even though i am doing gasket mount as it might be useful in future..
@@ -69,7 +77,9 @@ then after verifying that i was doing everything right, i annoted the numbers, t
 So finally schemetics is done - hopefully. Heres the img of my led matrix as i did few changes:
 ![](./imgs/rgb_matrix_sch.png)
 
-## Placing switches and diodes in pcb - Aug 16 - 10:30 (took 5h 23m !!) - [[vid1](https://lapse.hackclub.com/timelapse/cdlYKonsr0yP), [vid2](https://lapse.hackclub.com/timelapse/3-Le5tg14sAu), [vid3](https://lapse.hackclub.com/timelapse/bj1iuRdRYYz4)]
+**Total time spent: 55 minutes**
+
+# Aug 16: Placing switches and diodes in pcb - [[vid1](https://lapse.hackclub.com/timelapse/cdlYKonsr0yP), [vid2](https://lapse.hackclub.com/timelapse/3-Le5tg14sAu), [vid3](https://lapse.hackclub.com/timelapse/bj1iuRdRYYz4)]
 I needed to be careful this time.
 
 I started by updating pcb from schematics, then added the grids(19.05, added half, quarter etc later). Then i began moving the switches inside the board, i was following layout but wasn't rotating or making exact alice like but jst a structure kinda(like normal keyboard). while doing this i messed up spacing multiple times bt hopefully fixed them as i notice. heres the img: 
@@ -82,7 +92,9 @@ So later i realized i can jst place it in front side so jst placed all diodes. A
 Alrit later looked at others pcb and found out they also had sm space inconsistency so i js resume doing this. After replacing all switches i was done with it. then i redraw rectangle for the board. heres the image
 ![](./imgs/pcb_2.png)
 
-## Placing rgbs in pcb - Aug 17 - 08:34 (took 2h 24m) - [[vid1](https://lapse.hackclub.com/timelapse/EAJlNUQfDqrk), [vid2](https://lapse.hackclub.com/timelapse/DqyL5KlTACtc)]
+**Total time spent: 5 hours 23 minutes**
+
+# Aug 17: Placing rgbs in pcb - [[vid1](https://lapse.hackclub.com/timelapse/EAJlNUQfDqrk), [vid2](https://lapse.hackclub.com/timelapse/DqyL5KlTACtc)]
 Alrit so now only rgb is left to place in pcb!
 
 I started by deleting extra capacitors in schematics and maintained a gap of a capacitor per 4 rgbs(which was enough and will be less pain while soldering). heres the img:
@@ -101,7 +113,9 @@ Afterwards i placed the mounting holes on the edges and middle of the pcb.
 Now only capacitors and resistor was left, i wasn't sure where to place them so looked at others and found it would be near the switch(while maintaining the gap of 4 switched..). So while looking at the rgb matrix of schematics, started placing the capacitors and resistor(it was holy lagging while switching between schematics and pcb). Here is the image: 
 ![](./imgs/cmplt_unrouted_pcb.png)
 
-## Routing pcb - Aug 18 - 16:42 (took 4h 26m) - [[vid1](https://lapse.hackclub.com/timelapse/ouHZQnK8rh1N)]
+**Total time spent: 2 hours 24 minutes**
+
+# Aug 18: Routing pcb - [[vid1](https://lapse.hackclub.com/timelapse/ouHZQnK8rh1N)]
 So after many failed attempts(that i didn't record), i started by routing the individual diodes and their switches, then i started connecting the rows but i notices, since i wanted the traces to pass through middle of switch, i need to have some space between switch mid which was taken by rgbs, hence i started moving rgbs lil bit down and connecting the traces with diodes. the traces were zig zag when i was passing it through rotated switch but ig thats ok. then i routed column traces. Heres the img:
 ![](./imgs/rows_cols_routed.png)
 
@@ -112,7 +126,9 @@ But soon i realized if i start trace from right to left, it would conflict with 
 Now power was done but many things were left like rgb data, gnd etc. I started routing the rgb data in out next, i took a normal trace and connected it with resistors then the rgb din. i had to add few vias while doing it bcz the rgb traces were conflicting with the column traces(as both were b.cu), but yeah i connected every rgbs' data input and output. btw while doing it, i saw sm data input or output pads weren't accepting the traces and i found out it was bcz of mistakes i had done in schematics but resolved it. Heres the img:
 ![](./imgs/rgb_din_out.png)
 
-## PCB Routing part 2 - Aug 19 - 15:43 (took 3h 39m) - [[vid1](https://lapse.hackclub.com/timelapse/hr0nfcHYQDM3), [vid2](https://lapse.hackclub.com/timelapse/d2yHIfOvApwa), [vid3](https://lapse.hackclub.com/timelapse/KGxY6Ut_EcXD), [vid4](https://lapse.hackclub.com/timelapse/35E6xPwcAyC_)]
+**Total time spent: 4 hours 26 minutes**
+
+# Aug 19: PCB Routing part 2 - [[vid1](https://lapse.hackclub.com/timelapse/hr0nfcHYQDM3), [vid2](https://lapse.hackclub.com/timelapse/d2yHIfOvApwa), [vid3](https://lapse.hackclub.com/timelapse/KGxY6Ut_EcXD), [vid4](https://lapse.hackclub.com/timelapse/35E6xPwcAyC_)]
 So now only GNDs were need to be connected but i found out, if we do GND fill, we don't need to manually connect all GNDS with each other. So after several(rlly) painful attempts(not recorded), i started by drawing a filled zone on both back and front copper layer, GND as net. I noticed several air pockets hence started adding vias there (in first did in b.cu then f.cu). also i noticed there were some ratsnest that were pointing to nowhere in top so added vias and did sm troubleshooting there too and ended up with 0 unrouted trace(actually idk why it was showing 1 but when ran drc, it was 0)
 
 While adding vias in f.cu for removing air pockets, i ran DRC checks to see issues and started resolving that but i wasn't able to resolve all as well as didn't remove all air pockets in f.cu as i closed laptop.
@@ -127,7 +143,9 @@ Now i realized i need to make the corners curved so watched a tutorial but while
 ![](./imgs/final_pcb_3d.png)
 ![](./imgs/final_pcb.png)
 
-## Case Designing attempt 1 - Sep 07 - 10:09 (took 6h 36m) [[vid1](https://lapse.hackclub.com/timelapse/OvXzOiYZUe4G), [vid2](https://lapse.hackclub.com/timelapse/BVMXx6ve6AYw), [vid3](https://lapse.hackclub.com/timelapse/xVsu0WQh-wWo), [vid4](https://lapse.hackclub.com/timelapse/lH1MWFFoLUdn), [vid5](https://lapse.hackclub.com/timelapse/vZ_VEnhxBmsJ), [vid6](https://lapse.hackclub.com/timelapse/431a6qi_bVm1), [vid7](https://lapse.hackclub.com/timelapse/2cs6G5ezNLV6)]
+**Total time spent: 3 hours 39 minutes**
+
+# Sep 07: Case Designing attempt 1 - [[vid1](https://lapse.hackclub.com/timelapse/OvXzOiYZUe4G), [vid2](https://lapse.hackclub.com/timelapse/BVMXx6ve6AYw), [vid3](https://lapse.hackclub.com/timelapse/xVsu0WQh-wWo), [vid4](https://lapse.hackclub.com/timelapse/lH1MWFFoLUdn), [vid5](https://lapse.hackclub.com/timelapse/vZ_VEnhxBmsJ), [vid6](https://lapse.hackclub.com/timelapse/431a6qi_bVm1), [vid7](https://lapse.hackclub.com/timelapse/2cs6G5ezNLV6)]
 
 {*its my third attempt doing it but didn't record those..*}
 I started by following steps mentioned on guide, but was quickly lost, i spent 5 minutes figuring out how to import the 3d model exported from kicad which i had uploaded as document.
@@ -195,8 +213,9 @@ now we needed holes on the bottom case for the screw to pass. I thougt to get th
 
 WELP AFTER THESE ALL, I REALIZED I HAD MESSED UP IN MANY PLACES, LIKE WHERE I WAS THINKING TO PLACE THE SCREWS, THERE WAS THE PCB WHICH I HADN'T NOTICED, I HAD VERY LESS GAPS BETWEEN GASKET TABS AND THE OUTER WALL AND MANY OTHER MISTAKES HENCE I THOUGHT TO REATTEMPT D:
 
+**Total time spent: 6 hours 36 minutes**
 
-## Final Case Designing Part 1: Prerequisite, start and essentials - Sep 18 - 21:33 (took 7h 19m) [[vid1](https://lapse.hackclub.com/timelapse/OkyDbiONVOZg), [vid2](https://lapse.hackclub.com/timelapse/_BrwjxEgn1dI), [vid3](https://lapse.hackclub.com/timelapse/OXWLNhOe6tsM)]
+# Sep 18: Final Case Designing Part 1: Prerequisite, start and essentials - [[vid1](https://lapse.hackclub.com/timelapse/OkyDbiONVOZg), [vid2](https://lapse.hackclub.com/timelapse/_BrwjxEgn1dI), [vid3](https://lapse.hackclub.com/timelapse/OXWLNhOe6tsM)]
 
 Soooo yeh ts gonna be last attempt for sure.. Ts time i would use more systematic and accurate ways aaaaaaaaaa
 
@@ -265,8 +284,9 @@ Now for the head, i created another sketch on bottom face of bottom case and js 
 
 ![](./imgs/case_8.png)
 
+**Total time spent: 7 hours 19 minutes**
 
-## Final Case Designing Part 2: Some extra works and Decorations - Sep 22 - 10:19 (took 6h 39m) [[vid1](https://lapse.hackclub.com/timelapse/dU-ucpDa1ofi), [vid2](https://lapse.hackclub.com/timelapse/h_aeIV51l2e1), [vid3](https://lapse.hackclub.com/timelapse/P9Fk4AefJ6MD), [vid4](https://lapse.hackclub.com/timelapse/Xja5IlxoAyuc)]
+# Sep 22: Final Case Designing Part 2: Some extra works and Decorations - [[vid1](https://lapse.hackclub.com/timelapse/dU-ucpDa1ofi), [vid2](https://lapse.hackclub.com/timelapse/h_aeIV51l2e1), [vid3](https://lapse.hackclub.com/timelapse/P9Fk4AefJ6MD), [vid4](https://lapse.hackclub.com/timelapse/Xja5IlxoAyuc)]
 
 Guess what? i messed up once more ;p, i forgot adding the holes for stabalizers, so i went to one of the plate generator site, pasted the layout of my keeb and got the dxf file. created a new sketch on the face of plate and selected dfx and matched the positions of all holes then i deleted every thing other than the holes of stabalizers then i posted the sketch of stabalizers in the sketch of plate and bingo we got it:
 ![](./imgs/case_9.png)
@@ -294,3 +314,6 @@ Next thing i wanted to add were some hacky texts in the front wall in top case, 
 I added some nixos, gpl, rust and sm other ref texts XD, Also i bolded the text and here is the final look of the keyboard:
 ![](./imgs/case_11.png)
 ![](./imgs/case_12.png)
+
+**Total time spent: 6 hours 39 minutes**
+
