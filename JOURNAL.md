@@ -38,7 +38,7 @@ Ok this was so fun! So after building schematics, i had to build pcb, i started 
 Alrit so i thought this was all for pcb but got to know now i would have to route traces.. i started by looking  at other's routed board and started mine, i tried routing one row but was confused as the traces were conflicting but soon realized how to do! at first i was trynna making it as clean as possble but at the end got to know that it must be as short as possible hence had to edit and make it short. I used F.Cu for rows and B.Cu for cols. Afterwards, i edited my avatar and used it as silkscreen in the pcb! But the problem was at last in the guide it was said to flood leftover copper traces with gnd but i didn't find gnd :( so i skipped this as DRC was success. heres the routed pcb:
 ![](./imgs/pcb_routed.png)
 
-**Total time spent: 1 hour 29 minutes**
+**Total time spent: 1 hours 29 minutes**
 
 # Aug 15: Restarting Schematics part 1 - [lapse](https://lapse.hackclub.com/timelapse/MzG8KxQDhcaJ)
 So i jst found out that i messed up in my pcb: using uneven space even smwhere the switch has less area than it needs, etc. as well as i wanted to add rgb backlight (which i wasn't adding as i thought it might be complex but.. worth trying)
@@ -49,7 +49,8 @@ I used the original schematics of prev and started editing it. i looked into oth
 
 i moved keyboard matrix into new sheet but had no idea how to do input output of wires so spent few time to figure out but failed and jst dmd one person and left it. then did sm formatting inspired by others schematic.
 
-then i started researching abt rgbs and started implementing that, which took a little much time.. but now all the wires of different rows were conflicting so jst i shut down the laptop(didn't cmplt the rgb matrix)
+then i started researching abt rgbs and started implementing that, which took a little much time.. but now all the wires of different rows were conflicting so jst i shut down the laptop(didn't cmplt the rgb matrix):
+![](./imgs/wrong_rgb_schematics.png)
  
 **Total time spent: 2 hours 45 minutes**
 
@@ -90,12 +91,13 @@ I started by updating pcb from schematics, then added the grids(19.05, added hal
 
 After this, i flipped all switches individually as i wanted the kailh socket in back. then did sm research to confirm am doing correct afterwards i started placing diodes in left side of switch but i was trynna flip it but it was conflicting with kailh socket so jst closed laptop.
 
-**Total time spent: 1 hour 41 minutes**
+**Total time spent: 1 hours 41 minutes**
 
 # Aug 16: Placing diodes and tried adjusting them as my layout - [lapse](https://lapse.hackclub.com/timelapse/3-Le5tg14sAu)
 So later i realized i can jst place it in front side so jst placed all diodes. And now i wanted to cnvrt it same as my layout but i didn't place rgbs in switch as it would have been harder to grab and rotate all three components together. so yep i started making it same as my layout, i started rotating, moving etc and tbh this was hardest as i had to make sure of space and position. I was in 2nd row and realized that when i was rotating and moving, i wasn't able move switches and other with the defined grids and was worried i might be missing smthing so jst closed laptop ;p
+![](./imgs/wrong_switch_placement_pcb.png)
 
-**Total time spent: 1 hour 41 minutes**
+**Total time spent: 1 hours 41 minutes**
 
 # Aug 16: Moving and rotating pcb components in the shape of the layout - [lapse](https://lapse.hackclub.com/timelapse/bj1iuRdRYYz4)]
 Alrit later looked at others pcb and found out they also had sm space inconsistency so i js resume doing this. After replacing all switches i was done with it. then i redraw rectangle for the board. heres the image
@@ -125,7 +127,7 @@ Afterwards i placed the mounting holes on the edges and middle of the pcb.
 Now only capacitors and resistor was left, i wasn't sure where to place them so looked at others and found it would be near the switch(while maintaining the gap of 4 switched..). So while looking at the rgb matrix of schematics, started placing the capacitors and resistor(it was holy lagging while switching between schematics and pcb). Here is the image: 
 ![](./imgs/cmplt_unrouted_pcb.png)
 
-**Total time spent: 1 hour 56 minutes**
+**Total time spent: 1 hours 56 minutes**
 
 # Aug 18: Routing pcb - [lapse](https://lapse.hackclub.com/timelapse/ouHZQnK8rh1N)
 So after many failed attempts(that i didn't record), i started by routing the individual diodes and their switches, then i started connecting the rows but i notices, since i wanted the traces to pass through middle of switch, i need to have some space between switch mid which was taken by rgbs, hence i started moving rgbs lil bit down and connecting the traces with diodes. the traces were zig zag when i was passing it through rotated switch but ig thats ok. then i routed column traces. Heres the img:
@@ -145,7 +147,7 @@ So now only GNDs were need to be connected but i found out, if we do GND fill, w
 
 While adding vias in f.cu for removing air pockets, i ran DRC checks to see issues and started resolving that but i wasn't able to resolve all as well as didn't remove all air pockets in f.cu as i closed laptop.
 
-**Total time spent: 1 hour 31 minutes**
+**Total time spent: 1 hours 31 minutes**
 
 # Aug 20: more pcb routes debugging and adding silkscreen - [lapse](https://lapse.hackclub.com/timelapse/d2yHIfOvApwa)
 
@@ -158,7 +160,7 @@ then next day in morning, i started resolving rest of the drc issues. there was 
 Now i did sm research and started generating bom.csv then started removing the air pockets of f.cu.(finally). Heres the img:
 ![](./imgs/air_pocket_rmvd_pcb.png)
 
-**Total time spent: 1 hour 9 minutes**
+**Total time spent: 1 hours 9 minutes**
 
 # Aug 21: Curving the corners and exporting pcb - [lapse](https://lapse.hackclub.com/timelapse/35E6xPwcAyC_)
 Now i realized i need to make the corners curved so watched a tutorial but while i was doing that i realized i messed up with diodes so had to redo the removal of air pocket as well as trouble shooting of drc errs. Then i made the corners curved. Ok then at last i added 3d models of switches then i exported it as gerber and zipped as `out.zip`. Heres the final pcb's 3d and normal img:
@@ -168,7 +170,6 @@ Now i realized i need to make the corners curved so watched a tutorial but while
 **Total time spent: 30 minutes**
 
 # Sep 07: Case Designing: bottom case and plate(not completed) - [lapse](https://lapse.hackclub.com/timelapse/OvXzOiYZUe4G)
-
 {*its my third attempt doing it but didn't record those..*}
 I started by following steps mentioned on guide, but was quickly lost, i spent 5 minutes figuring out how to import the 3d model exported from kicad which i had uploaded as document.
 
@@ -185,14 +186,13 @@ Now we had to design the plate, so i created a new sketch with plane as face of 
 **Total time spent: 30 minutes**
 
 # Sep 09: Transforming bottom case and creating gasket tabs - [lapse](https://lapse.hackclub.com/timelapse/BVMXx6ve6AYw)
-
 After this i realized there must be some gap between the pcb and bottom case(i was assuming it would be 0), so i selected the bottom case part and transformed it -5mm in Z axis, then i adjusted the measurements to make everything fit(you can see the correct measurements i end up using in the gist).
 
 Now since we are done with plate for now, i started researching about gasket mount and planned to use gasket strips of 3mm thickness.
 I saw in the diagram, i needed to make the plate lil smaller and give sm kind of holder where the gasket will be glued, SO i offseted the plates inward and then through manual work, started creating the tabs of 15x5mm for gasket on the center of edges(2 top, 1 left, 1 right and 4 bottom). Also i made sure there were some gaps between the case side and tabs so that they don't come in contact(though later realized it was very less..):
 ![](./imgs/onshape_4.png)
 
-**Total time spent: 1 hour 9 minutes**
+**Total time spent: 1 hours 9 minutes**
 
 # Sep 10: Sm improvements in plate and bottom case and init creating top case - [lapse](https://lapse.hackclub.com/timelapse/xVsu0WQh-wWo)
 Now we had bottom case and plate with holes for switches and gasket tabs, but i needed gap of 2mm between the bottom of plate and top of bottom case as i had to place the 3mm gasket strips there(33% compressed: 3 - (33% of 3) is ~2). i saw i had gap of 0.5mm, so i edit the transformed value from -5mm to -6.5mm so that now we had 2mm of gap.
@@ -206,7 +206,6 @@ Then i created another plane, 2mm above the plate for top case and created a new
 **Total time spent: 59 minutes**
 
 # Sep 10: Completeing top cas - [lapse](https://lapse.hackclub.com/timelapse/lH1MWFFoLUdn)
-
 After watching some referance images of top case, i realized i don't need indiviual holes for keycaps rather there will be big hole, hence i deleted all the switch holes from top case sketch.
 
 then in the sketch of top case, i drew inner holes like the ref(zig zag kinda) and adjusted it such that it doesn't conflict with the keycap and have some spaces(more than 19mm ig) also looks kinda cool:
@@ -225,7 +224,6 @@ soon i realized that i have keycaps of size more than 1u but the holes i had in 
 **Total time spent: 53 minutes**
 
 # Sep 14: adding pillars for screws - [lapse](https://lapse.hackclub.com/timelapse/vZ_VEnhxBmsJ)
-
 Now since we were done with all three parts(top and bottom case, and plate), i had to work on the screw thingies so that i can assemble them and disassembble as my will. I thought of 2 steps: first is adding plastic pillars of diameter 5mm then screw hole inside it as these holes were supposed to be in middle between the wall and empty area.
 
 hence i created a new sketch in the face of bottom case, then on all side, i created a circle of diameter of 5mm and also in mid(as i thought it would be a good idea, but i had to add a hole in plate too). then i extruded it upward 15 mm that it comes in same level as top of walls of my bottom case:
@@ -238,14 +236,12 @@ then for top case pillar, created another sketch in face of top case, and create
 **Total time spent: 43 minutes**
 
 # Sep 14: Hole for heatset on top case - [lapse](https://lapse.hackclub.com/timelapse/431a6qi_bVm1), 
-
 Now once we had pillars, i started creating holes for heat seat thingy. i created a new sketch on bottom face of top case pillar. i created circle of 3.6mm diameter in the centers of the pillars and extruded and remove 4.2mm so that the heatset would sit there. 
 ![](./imgs/onshape_12.png)
 
 **Total time spent: 26 minutes**
 
 # sep 14: Holes on bottom case for screws- [lapse](https://lapse.hackclub.com/timelapse/2cs6G5ezNLV6)
-
 now we needed holes on the bottom case for the screw to pass. I thougt to get the screw from bottom to top. Hence i created a new sketch on the bottom face of bottom case, created circles of diameter 5mm and matched its position as the pillars then downscaled it to 2.4mm as the screw pipe would be nearly 2mm ig. Then i extruded it 15mm upward, selected remove and yeh we got the first hole, then created another sketch on the same face and with the same centers as of the hole, created another circles of 3.8mm for keeping the head of screw then extruded the sketch 11 mm upward and remove:
 ![](./imgs/onshape_13.png)
 
@@ -254,7 +250,6 @@ WELP AFTER THESE ALL, I REALIZED I HAD MESSED UP IN MANY PLACES, LIKE WHERE I WA
 **Total time spent: 28 minutes**
 
 # Sep 18: Adding keycaps on switches on PCB - [lapse](https://lapse.hackclub.com/timelapse/OkyDbiONVOZg)
-
 Soooo yeh ts gonna be last attempt for sure.. Ts time i would use more systematic and accurate ways aaaaaaaaaa
 
 Very first thing i thought to do was to use keycaps on my pcb so that i could get correct idea of dimensions, hence i downloaded the cad models of all size of keycaps from grabcad. Since it was a single file for all keycaps, i seperated the required keycaps and exported manually. Then in footprint editor, i added 1u keycap in the footprint of all switches.
@@ -262,10 +257,9 @@ Very first thing i thought to do was to use keycaps on my pcb so that i could ge
 then i opened pcb editor and started changing the keycap models of switches which were for bigger keycaps(like 1.5u etc). It was kinda time taking process as i had to do try and err to see if the keycap was in correct position and orientation or not: 
 ![](./imgs/case_1.png)
 
-**Total time spent: 1 hour 6 minutes**
+**Total time spent: 1 hours 6 minutes**
 
 # Sep 19: Creating bottom case, plate and first gasket tab - [lapse](https://lapse.hackclub.com/timelapse/_BrwjxEgn1dI)
-
 Then i exported the step file and gerber again. Created a new document in onshape.
 
 As previous, uploaded the step model in the document then in assembly, grouped all components together, moved to center and created a new part studio with the context of it.
@@ -293,7 +287,6 @@ Afterwards, i edited the plate sketch on the center of left side, i created a re
 **Total time spent: 2 hours 44 minutes**
 
 # Sep 19: Repeating gasket tabs, creating top case and pillars and holes for screws - [lapse](https://lapse.hackclub.com/timelapse/OXWLNhOe6tsM)
-
 Then i repeated the gasket tabs for other sides -- 2 on top, 1 on sides, 4 on bottom.
 ![](./imgs/case_4.png)
 
@@ -331,7 +324,6 @@ Now for the head, i created another sketch on bottom face of bottom case and js 
 **Total time spent: 3 hours 29 minutes**
 
 # Sep 22: Adding holes for stabalizers and trying to understand how to create rugged surface - [lapse](https://lapse.hackclub.com/timelapse/dU-ucpDa1ofi)
-
 Guess what? i messed up once more ;p, i forgot adding the holes for stabalizers, so i went to one of the plate generator site, pasted the layout of my keeb and got the dxf file. created a new sketch on the face of plate and selected dfx and matched the positions of all holes then i deleted every thing other than the holes of stabalizers then i posted the sketch of stabalizers in the sketch of plate and bingo we got it:
 ![](./imgs/case_9.png)
 
@@ -339,10 +331,9 @@ Now we were done with all the things and the final work was left: Decoration. So
 
 First was the low topology kinda rugged surface on top case as it was too plain, so i started recreating that in blender to get the taste then i tried to do the same thing in onshape but tbh i didn't find any similar methods as it was in blender :(
 
-**Total time spent: 1 hour 4 minutes**
+**Total time spent: 1 hours 4 minutes**
 
 # Sep 23: Experimenting with rugged surface through lofts and enclosure then implementing in real doc - [lapse](https://lapse.hackclub.com/timelapse/h_aeIV51l2e1)
-
 So after some external helps, i got to know that we could use lofts and surface to create the rugged and low poly surface!
 
 After watching some tutorials, i moved to an experiment document in onshape and started creating the rugged, low poly surface there, what i did was that i created a plane with some upward offset and added lines, essentially forming a polygon kinda with many segments around the keyboard in the center then created another sketch and there started connecting the edges of top case and the new line we created through loft surface, and like that covered entire top surface and tbh it was looking so cool, i regretted why i was doin it in experiment doc not real one lel.
@@ -363,5 +354,5 @@ I added some nixos, gpl, rust and sm other ref texts XD, Also i bolded the text 
 ![](./imgs/case_11.png)
 ![](./imgs/case_12.png)
 
-**Total time spent: 1 hour 29 minutes**
+**Total time spent: 1 hours 29 minutes**
 
