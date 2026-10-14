@@ -12868,7 +12868,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_marbastlib-mx:STAB_MX_3u"
+		(property "Footprint" "PCM_marbastlib-mx:STAB_MX_2.75u"
 			(at 160.02 227.33 0)
 			(hide yes)
 			(show_name no)
