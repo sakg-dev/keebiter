@@ -356,5 +356,3 @@ I added some nixos, gpl, rust and sm other ref texts XD, Also i bolded the text 
 ![](./imgs/case_12.png)
 
 **Total time spent: 1 hours 29 minutes**
-
-# Oct 14: 
