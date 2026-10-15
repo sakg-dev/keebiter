@@ -1,10 +1,10 @@
 [package]
-name = "sakg-keeb-firmware"
+name = "keebiter"
 version = "0.1.0"
 description = "Keyboard firmware written in Rust for SakG's Keeb :3"
 
 [[bin]]
-name = "sakg-keeb"
+name = "keebiter"
 test = false
 bench = false
 

@@ -90,6 +90,6 @@ async fn main(_spawner: Spawner) {
 
     let mut watchdog_runner = Rp2040Watchdog::default_runner(embassy_rp::watchdog::Watchdog::new(p.WATCHDOG));
 
-    info!("Running the keeb");
+    info!("Running the keebiter");
     run_all!(matrix, storage, usb_transport, wpm_processor, keyboard, watchdog_runner).await;
 }

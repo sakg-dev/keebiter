@@ -1,32 +1,42 @@
-## My keeb
-My first self made mechanical keyboard:
-A 60% alice type tactile keyboard, properties:
-- Hot swappable: through kailh socker
-- 61 keys: no dedicated arrow keys or f keys
-- Includes rgb light: individual rgbs
+<h1 align="center">Keebiter</h1>
 
-### Imgs:
-- Schematics And PCB:
-    - Schematics:
-        - Main: ![](/imgs/readme_final_main_schematics.png)
-        - Switches: ![](/imgs/readme_final_switches_schematics.png)
-        - RGBs: ![](/imgs/readme_final_rgbs_schematics.png)
-    - PCB:
-        - F.Cu: ![](/imgs/readme_final_pcb_fcu.png)
-        - B.Cu: ![](/imgs/readme_final_pcb_bcu.png)
-        - F.Cu: ![](/imgs/readme_final_pcb_3d.png)
-- Onshape:
-    - Final:
-        - ![](/imgs/case_11.png)
-        - ![](/imgs/case_12.png)
+*<h5 align="center">My first self made Mechanical Keyboard built through **iteration**</h5>*
+-------
+<br>
 
-## Development And Output Files
+## What is this?
+**A 60% Alice Style Tactile Mechanical Keyboard**
+- **Hot Swappable Switches:** through kailh socker
+- **61 keys:** No dedicated arrow keys, numpads or F-x keys
+- **Rgb light:** individual Addressable RGBs
+- **Firmware:** RMK Firmware
+
+## Why?
+It started 2 mnths ago in the beginning of august, i was kinda new in vim and wanted to become a complete keyboard guy and then i saw the YSWS in hackclub named keeb that would fund me if i make the keyboard, at the beginning, i had no idea how tf a mechanical keyboard works but slowly got to know all things and built a keyboard yay. It would been built in ~2 weeks had i not had my exams and other projects :/
+
+-------
+
+### Renders:
+![](/imgs/readme_final_assembly.png)
+![](/imgs/readme_final_main_schematics.png)
+![](/imgs/readme_final_switches_schematics.png)
+![](/imgs/readme_final_rgbs_schematics.png)
+![](/imgs/readme_final_pcb_fcu.png)
+![](/imgs/readme_final_pcb_bcu.png)
+![](/imgs/readme_final_pcb_3d.png)
+![](/imgs/case_11.png)
+![](/imgs/case_12.png)
+
+-------
+
+### Development And Output Files
 - Layout: [layout_v1.json](/layout/layout_v1.json)
 - Schematics and PCB: [kicad/](/kicad/)
 - Gerber file: [gerber.zip](/gerber.zip)
 - Onshape exports: [onshape_exports/](/onshape_exports/)
 - BOM: [BOM.csv](/BOM.csv)
 - Onshape Document: [link](https://cad.onshape.com/documents/9aab3062eb3c9d6b80a1ab5a/w/c58e3f2f51a15de1421f10c6/e/e458f6ddd190f7c08079581c)
+- Firmware: [firmware/](/firmware/)
 
 ## BOM
 [BOM.csv](/BOM.csv)
@@ -48,14 +58,15 @@ A 60% alice type tactile keyboard, properties:
 | Heatset insert                   | 6                      | $0.5           | https://onlyscrews.in/products/m2-x-4mm-brass-threaded-inserts                                  |
 | Screws                           | 6                      | $0.5           | https://onlyscrews.in/products/m2-x-10mm-phillips-round-head-laptop-screw-dia-2mm-length-10mm   |
 | Usb Cable                        | 1                      | $2.7           | https://robu.in/product/5v-3a-usb-to-micro-usb-power-cable-with-led-indicator-for-raspberry-3b/ |
+| KeyCaps And Shaft Puller         | 1                      | $4.2           | https://www.amazon.in/Eatech-Accessories-Unloading-Keyboard-Switches/dp/B088BYS5RW              |
 | 3d printed Case and Plate        | 1                      | Not calculated |                                                                                                 |
 | Total                            |                        | $193           |                                                                                                 |
 
 ## Journal
 See [JOURNAL.md](/JOURNAL.md)
 
+## License
+It's under [MIT license](./LICENSE), so copy it, modify it, sell it, become a billionaire, i expect nothing in return. But if it breaks, explodes, catches fire, or opens a portal to nether, that’s between you and your hardware. I was never here >~<
+
 ## AI usage
 Used ai to know more about how a mechanical keyboard works under the hood, measurements i should use, design inspiration, component links and what would be best for me
-
-## Story
-It started 2 mnths ago in the beginning of august, i was kinda new in vim and wanted to become a complete keyboard guy and then i saw the YSWS in hackclub named keeb that would fund me if i make the keyboard, at the beginning, i had no idea how tf a mechanical keyboard works but slowly got to know all things and built a keyboard yay. I can have built it in ~2 weeks had i not had my exams and other projects
