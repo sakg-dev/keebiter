@@ -1,14 +1,51 @@
 [package]
-name = "firmware"
+name = "sakg-keeb-firmware"
 version = "0.1.0"
-edition = "2024"
+description = "Keyboard firmware written in Rust for SakG's Keeb :3"
 
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"
+[[bin]]
+name = "sakg-keeb"
+test = false
+bench = false
 
 [dependencies]
-rmk = { version = "0.9.0", features = ["defmt", "storage", "vial", "watchdog", "pico_w_ble", "rp2040"] }
+rmk = { version = "0.9.0", default-features = false, features = ["defmt", "storage", "watchdog", "rp2040"] }
+
+embassy-executor = { version = "0.10", features = [
+    "defmt",
+    "platform-cortex-m",
+    "executor-thread",
+] }
+embassy-rp = { version = "0.10", features = [
+    "rp2040",
+    "defmt",
+    "time-driver",
+    "critical-section-impl",
+] }
+embassy-time = { version = "0.5", features = ["defmt"] }
+
+cortex-m-rt = "0.7.5"
+defmt = "1"
+defmt-rtt = "1"
+panic-probe = { version = "1", features = ["print-defmt"] }
 portable-atomic = { version = "1", features = ["critical-section"] }
+
+[build-dependencies]
+const-gen = "1.6"
+json = "0.12"
+xz2 = "0.1.7"
+
+[profile.dev]
+codegen-units = 1
+debug = true
+opt-level = 1
+overflow-checks = true
+lto = false
+panic = 'unwind'
+
+[profile.release]
+codegen-units = 1
+debug = true
+opt-level = "z"
+overflow-checks = false
+lto = "fat"
